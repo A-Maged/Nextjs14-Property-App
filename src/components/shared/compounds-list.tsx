@@ -19,7 +19,7 @@ export default function CompoundsList({
       })}
     >
       {compounds.map((compound) => (
-        <CompoundCard key={compound.compound} compound={compound} />
+        <CompoundCard key={compound.id} compound={compound} />
       ))}
     </div>
   );

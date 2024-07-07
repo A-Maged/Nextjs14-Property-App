@@ -1,11 +1,22 @@
 import { SearchCompoundsForm } from "@/components/shared/search-compounds-form";
 import { DesktopNav } from "./desktop-nav";
 import { MobileNav } from "./mobile-nav";
+import clsx from "clsx";
 
-export function MainLayout({ children }: { children: React.ReactNode }) {
+export function MainLayout({
+  children,
+  fullWidth = false,
+}: {
+  children: React.ReactNode;
+  fullWidth?: boolean;
+}) {
   return (
     <>
-      <div className="bg-black text-white">
+      <div
+        className={clsx("bg-black text-white", {
+          "mb-5": !fullWidth,
+        })}
+      >
         <div className="container flex items-center justify-between gap-9 border-b-2 border-black p-4">
           <MobileNav />
 
@@ -15,7 +26,13 @@ export function MainLayout({ children }: { children: React.ReactNode }) {
         </div>
       </div>
 
-      <div className="container pt-8">{children}</div>
+      <div
+        className={clsx({
+          "container m-auto": !fullWidth,
+        })}
+      >
+        {children}
+      </div>
     </>
   );
 }

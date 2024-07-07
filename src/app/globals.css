@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "~react-modern-drawer/dist/index.css";
+
 .container {
   margin: auto;
   max-width: 1280px;

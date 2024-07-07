@@ -5,7 +5,8 @@ import { FaHeart, FaRegHeart } from "react-icons/fa";
 import useLocalStorage from "use-local-storage";
 import omit from "lodash/omit";
 import { useEffect, useState } from "react";
-import { Compound } from "../../types/compound";
+import { Compound } from "@/types/compound";
+import Link from "next/link";
 
 export default function CompoundCard({ compound }: { compound: Compound }) {
   const [data, setData] = useLocalStorage<Record<string, boolean>>("data", {});
@@ -29,22 +30,21 @@ export default function CompoundCard({ compound }: { compound: Compound }) {
     }
   }
 
-  // function stopNavigationOnFavBtnClick(e: React.MouseEvent) {
-  //   const shouldStopNavigating =
-  //     (e.target as HTMLAnchorElement).getAttribute("data-testid") ===
-  //     "favorite-btn";
+  function stopNavigationOnFavBtnClick(e: React.MouseEvent) {
+    const shouldStopNavigating =
+      (e.target as HTMLAnchorElement).getAttribute("data-testid") ===
+      "favorite-btn";
 
-  //   if (shouldStopNavigating) {
-  //     e.preventDefault();
-  //   }
-  // }
+    if (shouldStopNavigating) {
+      e.preventDefault();
+    }
+  }
 
   return (
-    <div
-      // Link
-      // onClick={stopNavigationOnFavBtnClick}
-      // href={`/compounds/${compound.compound}`}
-      className="block w-full border-[1px] border-solid border-gray-400 p-5"
+    <Link
+      onClick={stopNavigationOnFavBtnClick}
+      href={`/compounds/${compound.id}`}
+      className="block border-[1px] border-solid border-gray-400 p-5"
     >
       <div className="mb-4 flex items-center justify-between gap-4">
         <h2 className="w-fit rounded-3xl bg-gray-200 px-4 py-2 text-sm font-bold">
@@ -75,6 +75,6 @@ export default function CompoundCard({ compound }: { compound: Compound }) {
           {millify(Math.floor(compound.valuations[0].avgPrice))} EGP
         </span>
       </p>
-    </div>
+    </Link>
   );
 }

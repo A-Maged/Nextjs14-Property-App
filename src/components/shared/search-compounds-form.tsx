@@ -2,7 +2,7 @@ import { FaSearch } from "react-icons/fa";
 
 export function SearchCompoundsForm() {
   return (
-    <form className="relative flex gap-3" action="/search">
+    <form className="relative flex gap-3" action="/compounds/search">
       <button className="absolute left-[12px] top-[20px]" type="submit">
         <FaSearch className="fill-gray-400 text-xl" />
       </button>
