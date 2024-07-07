@@ -2,11 +2,9 @@ import "@/app/globals.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { MainLayout } from "@/components/layouts/main-layout";
 
 const inter = Inter({ subsets: ["latin"] });
 

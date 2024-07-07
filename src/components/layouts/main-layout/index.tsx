@@ -17,7 +17,7 @@ export function MainLayout({
           "mb-5": !fullWidth,
         })}
       >
-        <div className="container flex items-center justify-between gap-9 border-b-2 border-black p-4">
+        <div className="container flex items-center justify-between gap-9 border-b-2 border-black px-2 py-4">
           <MobileNav />
 
           <DesktopNav />
