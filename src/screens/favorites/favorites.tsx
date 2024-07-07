@@ -1,7 +1,7 @@
 "use client";
 
 import { getFavoriteCompoundList } from "@/api-fetchers/get-favorite-compounds-list";
-import CompoundCard from "@/components/shared/compound-card";
+import CompoundsList from "@/components/shared/compounds-list";
 import { Compound } from "@/types/compound";
 import { useEffect, useMemo, useState } from "react";
 import useLocalStorage from "use-local-storage";
@@ -44,11 +44,7 @@ export function FavoriteCompoundsPage() {
           You haven&apos;t added any compounds to your favorite list!
         </h3>
       ) : (
-        <div className="mb-5 grid w-full grid-cols-1 gap-[10px] md:grid-cols-2 lg:grid-cols-3">
-          {compounds.map((compound) => (
-            <CompoundCard key={compound.compound} compound={compound} />
-          ))}
-        </div>
+        <CompoundsList compounds={compounds} />
       )}
     </div>
   );

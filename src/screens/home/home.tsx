@@ -1,14 +1,8 @@
-import dynamic from "next/dynamic";
-
 import { ShowMapBtn } from "./show-map-btn";
-import { WithMap } from "./with-map";
+import { CompoundsMap } from "./compounds-map";
 import { getCompounds } from "@/api-fetchers/get-compounds";
 import { getCompoundsLocations } from "@/api-fetchers/get-compounds-locations";
-
-const CompoundCard = dynamic(
-  () => import("@/components/shared/compound-card"),
-  { ssr: false },
-);
+import CompoundsList from "@/components/shared/compounds-list";
 
 export async function HomePage() {
   const apiResults = await Promise.allSettled([
@@ -30,11 +24,13 @@ export async function HomePage() {
         <ShowMapBtn />
       </div>
 
-      <WithMap compoundLocations={compoundLocations}>
-        {compoundList.map((compound) => (
-          <CompoundCard key={compound.compound} compound={compound} />
-        ))}
-      </WithMap>
+      <div className="relative flex h-[73vh] w-full gap-4">
+        <div className="w-full overflow-hidden overflow-y-scroll">
+          <CompoundsList compounds={compoundList} />
+        </div>
+
+        <CompoundsMap compoundLocations={compoundLocations}></CompoundsMap>
+      </div>
     </main>
   );
 }
