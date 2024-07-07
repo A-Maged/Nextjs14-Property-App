@@ -1,0 +1,1 @@
+export { FavoriteCompoundsPage } from "./favorites";
