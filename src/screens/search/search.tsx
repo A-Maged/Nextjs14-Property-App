@@ -1,5 +1,5 @@
 import { searchCompounds } from "@/api-fetchers/search-compounds";
-import CompoundsList from "@/components/shared/compounds-list";
+import CompoundsList from "@/components/shared/compounds-cards-list";
 
 type Props = {
   searchParams: { q: string };
