@@ -2,6 +2,7 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y } from "swiper/modules";
+import Image from "next/image";
 
 type Props = {
   images: string[];
@@ -17,13 +18,14 @@ export function CompoundImages({ images }: Props) {
       loop
     >
       {images.map((imgSrc) => (
-        <SwiperSlide key={imgSrc}>
-          <div
-            className="h-[60vh] w-full bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: `url(${imgSrc})`,
-            }}
-          ></div>
+        <SwiperSlide key={imgSrc} style={{ height: 500 }}>
+          <Image
+            src={imgSrc}
+            fill={true}
+            layout="fill"
+            alt="compound-image"
+            style={{ objectFit: "cover" }}
+          />
         </SwiperSlide>
       ))}
     </Swiper>
