@@ -41,7 +41,6 @@ export const Map = ({ children, height }: Props) => {
         mapContainerStyle={{
           width: "100%",
           height: height ?? "400px",
-          cursor: "crosshair",
         }}
         options={{
           scrollwheel: true,

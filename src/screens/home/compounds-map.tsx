@@ -15,7 +15,7 @@ export function CompoundsMap({ compoundLocations }: Props) {
 
   return (
     <div
-      className={clsx("absolute w-full lg:relative", {
+      className={clsx("absolute w-full lg:sticky lg:top-[5%] lg:h-[82vh]", {
         // hide without unmounting, to preserve map state
         hidden: !showMap,
       })}

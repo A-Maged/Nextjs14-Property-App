@@ -24,8 +24,8 @@ export async function HomePage() {
         <ShowMapBtn />
       </div>
 
-      <div className="relative flex h-[73vh] w-full gap-4">
-        <div className="w-full overflow-hidden overflow-y-scroll">
+      <div className="relative flex w-full gap-4">
+        <div className="absolute h-[73vh] w-full overflow-scroll lg:relative lg:h-full lg:overflow-visible">
           <CompoundsList compounds={compoundList} />
         </div>
 
