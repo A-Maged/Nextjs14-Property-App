@@ -1,33 +1,18 @@
 "use client";
 
-import { getFavoriteCompoundList } from "@/api-fetchers/get-favorite-compounds-list";
-import CompoundsCardsList from "@/components/shared/compounds-cards-list";
-import { Compound } from "@/types/compound";
-import { useEffect, useMemo, useState } from "react";
-import useLocalStorage from "use-local-storage";
+import { useMemo } from "react";
+import { PageContent } from "./page-content";
+import { useLoadingLocalStorage } from "@/hooks/use-loading-local-storage";
 
 export function FavoriteCompoundsPage() {
-  const [localData, setLocalData] = useLocalStorage<Record<string, boolean>>(
-    "data",
-    {},
-  );
+  const { localDataIsLoading, localData, setLocalData } =
+    useLoadingLocalStorage<Record<string, boolean>>("data", {});
 
   const ids = useMemo(() => Object.keys(localData).map(Number), [localData]);
-
-  const [compounds, setCompounds] = useState<Compound[]>([]);
 
   function clearAllFavorites() {
     setLocalData({});
   }
-
-  useEffect(() => {
-    if (ids) {
-      (async function () {
-        const data = await getFavoriteCompoundList(ids);
-        setCompounds(data);
-      })();
-    }
-  }, [ids]);
 
   return (
     <div>
@@ -39,13 +24,7 @@ export function FavoriteCompoundsPage() {
         </button>
       </div>
 
-      {!ids?.length ? (
-        <h3 className="text-lg text-gray-500">
-          You haven&apos;t added any compounds to your favorite list!
-        </h3>
-      ) : (
-        <CompoundsCardsList compounds={compounds} fourPerRow />
-      )}
+      <PageContent ids={ids} localDataIsLoading={localDataIsLoading} />
     </div>
   );
 }

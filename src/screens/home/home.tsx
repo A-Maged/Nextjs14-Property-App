@@ -16,6 +16,14 @@ export async function HomePage() {
   const compoundLocations =
     apiResults[1].status === "fulfilled" ? apiResults[1].value : [];
 
+  if (!compoundList?.length) {
+    return (
+      <div className="flex h-[70vh] items-center justify-center">
+        <h1 className="text-2xl">No compounds found</h1>
+      </div>
+    );
+  }
+
   return (
     <main className="m-auto p-4 pt-0">
       <div className="mb-5 flex items-center justify-between">
