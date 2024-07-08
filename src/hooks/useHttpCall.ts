@@ -1,18 +1,20 @@
 import { useState, useEffect } from "react";
 
-export function useHttpCall(
-  asyncFunction: any,
-  options: {
-    initState: any;
-    args?: any[];
-    enabled?: boolean;
-  } = {
+type Options = {
+  initState: any;
+  args?: any[];
+  enabled?: boolean;
+};
+
+export function useHttpCall<T>(
+  asyncFunction: (...args: any[]) => Promise<T>,
+  options: Options = {
     initState: null,
   },
 ) {
   const [isLoading, setIsLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
-  const [data, setData] = useState<any>(options.initState);
+  const [data, setData] = useState<T>(options.initState);
 
   const args = options.args || [];
   const enabled = options.enabled === undefined ? true : options.enabled;
@@ -35,7 +37,7 @@ export function useHttpCall(
     if (enabled) {
       fetchData();
     }
-  }, [args, enabled]);
+  }, [...args, enabled]);
 
   return { isLoading, errorMsg, data };
 }

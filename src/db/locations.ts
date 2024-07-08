@@ -1,4 +1,6 @@
-export const locations = [
+import { CompoundLocation } from "@/types/compound-location";
+
+export const locations: CompoundLocation[] = [
   {
     id: 1,
     name: "Dar Misr Phase 2",
@@ -8,16 +10,7 @@ export const locations = [
       lon: 30.9852530668,
     },
     district: "Sheikh Zayed",
-  },
-  {
-    id: 72,
-    name: "Al Guezira",
-    nameAr: "الجزيرة",
-    location: {
-      lat: 30.0236554504,
-      lon: 30.9883565891,
-    },
-    district: "Sheikh Zayed",
+    marketPrice: 4600000,
   },
   {
     id: 133,
@@ -28,36 +21,7 @@ export const locations = [
       lon: 30.9859884732,
     },
     district: "Sheikh Zayed",
-  },
-  {
-    id: 229,
-    name: "The Polygon",
-    nameAr: "ذا بوليجون",
-    location: {
-      lat: 30.0699273238,
-      lon: 30.9452179642,
-    },
-    district: "Sheikh Zayed",
-  },
-  {
-    id: 243,
-    name: "Capital Business Park",
-    nameAr: "كابيتال بيزنس بارك",
-    location: {
-      lat: 30.0249945516,
-      lon: 31.0129728817,
-    },
-    district: "Sheikh Zayed",
-  },
-  {
-    id: 244,
-    name: "Centro Zayed",
-    nameAr: "سينترو زايد",
-    location: {
-      lat: 30.0307810555,
-      lon: 30.9972188513,
-    },
-    district: "Sheikh Zayed",
+    marketPrice: 9666666.666666666,
   },
   {
     id: 626,
@@ -68,6 +32,7 @@ export const locations = [
       lon: 31.0266844646,
     },
     district: "Sheikh Zayed",
+    marketPrice: 11660000,
   },
   {
     id: 630,
@@ -78,6 +43,7 @@ export const locations = [
       lon: 31.0214750061,
     },
     district: null,
+    marketPrice: 11064266.382022472,
   },
   {
     id: 638,
@@ -88,6 +54,7 @@ export const locations = [
       lon: 31.0187267174,
     },
     district: "Sheikh Zayed",
+    marketPrice: 17500000,
   },
   {
     id: 642,
@@ -98,6 +65,7 @@ export const locations = [
       lon: 31.0139061498,
     },
     district: "Sheikh Zayed",
+    marketPrice: 18450000,
   },
   {
     id: 646,
@@ -108,6 +76,7 @@ export const locations = [
       lon: 31.0187376738,
     },
     district: "Sheikh Zayed",
+    marketPrice: 3050000,
   },
   {
     id: 649,
@@ -118,6 +87,7 @@ export const locations = [
       lon: 31.0153483878,
     },
     district: "Sheikh Zayed",
+    marketPrice: 45000000,
   },
   {
     id: 650,
@@ -128,6 +98,7 @@ export const locations = [
       lon: 31.0085648148,
     },
     district: "Sheikh Zayed",
+    marketPrice: 10000000,
   },
   {
     id: 653,
@@ -138,6 +109,7 @@ export const locations = [
       lon: 31.0052040955,
     },
     district: "Sheikh Zayed",
+    marketPrice: 45000,
   },
   {
     id: 654,
@@ -148,6 +120,7 @@ export const locations = [
       lon: 31.0050122594,
     },
     district: "Sheikh Zayed",
+    marketPrice: 29841483.333333332,
   },
   {
     id: 657,
@@ -158,6 +131,7 @@ export const locations = [
       lon: 31.0027794775,
     },
     district: "Sheikh Zayed",
+    marketPrice: 100000,
   },
   {
     id: 659,
@@ -168,6 +142,7 @@ export const locations = [
       lon: 31.0035899436,
     },
     district: "6th of October",
+    marketPrice: 6617800,
   },
   {
     id: 660,
@@ -178,6 +153,7 @@ export const locations = [
       lon: 30.9963123908,
     },
     district: "Sheikh Zayed",
+    marketPrice: 8500000,
   },
   {
     id: 662,
@@ -188,6 +164,7 @@ export const locations = [
       lon: 30.9990258617,
     },
     district: "Sheikh Zayed",
+    marketPrice: 9500000,
   },
   {
     id: 667,
@@ -198,6 +175,7 @@ export const locations = [
       lon: 30.9926569687,
     },
     district: null,
+    marketPrice: 8500000,
   },
   {
     id: 668,
@@ -208,16 +186,7 @@ export const locations = [
       lon: 30.9922970162,
     },
     district: "Sheikh Zayed",
-  },
-  {
-    id: 673,
-    name: "Green Residence 1",
-    nameAr: null,
-    location: {
-      lat: 30.0282780955,
-      lon: 30.9881610908,
-    },
-    district: "Sheikh Zayed",
+    marketPrice: 25000,
   },
   {
     id: 674,
@@ -228,6 +197,7 @@ export const locations = [
       lon: 30.9884618059,
     },
     district: "Sheikh Zayed",
+    marketPrice: 12500000,
   },
   {
     id: 675,
@@ -238,6 +208,7 @@ export const locations = [
       lon: 30.9868320129,
     },
     district: "Sheikh Zayed",
+    marketPrice: 6500000,
   },
   {
     id: 676,
@@ -248,16 +219,7 @@ export const locations = [
       lon: 30.9874836282,
     },
     district: "6th of October",
-  },
-  {
-    id: 677,
-    name: "Sama",
-    nameAr: "ساما",
-    location: {
-      lat: 30.0219910414,
-      lon: 30.9841791194,
-    },
-    district: null,
+    marketPrice: 18000000,
   },
   {
     id: 678,
@@ -268,6 +230,7 @@ export const locations = [
       lon: 30.9810112739,
     },
     district: "Sheikh Zayed",
+    marketPrice: 9500000,
   },
   {
     id: 679,
@@ -278,6 +241,7 @@ export const locations = [
       lon: 30.9818235995,
     },
     district: null,
+    marketPrice: 13500000,
   },
   {
     id: 680,
@@ -288,6 +252,7 @@ export const locations = [
       lon: 30.9818750424,
     },
     district: "Sheikh Zayed",
+    marketPrice: 5600000,
   },
   {
     id: 681,
@@ -298,6 +263,7 @@ export const locations = [
       lon: 30.9807916271,
     },
     district: null,
+    marketPrice: 15500000,
   },
   {
     id: 682,
@@ -308,6 +274,7 @@ export const locations = [
       lon: 30.9781501953,
     },
     district: "Sheikh Zayed",
+    marketPrice: 5500000,
   },
   {
     id: 683,
@@ -318,6 +285,7 @@ export const locations = [
       lon: 30.9746826982,
     },
     district: "Sheikh Zayed",
+    marketPrice: 16000000,
   },
   {
     id: 686,
@@ -328,6 +296,7 @@ export const locations = [
       lon: 30.9716717813,
     },
     district: "Sheikh Zayed",
+    marketPrice: 8309090.909090909,
   },
   {
     id: 687,
@@ -338,6 +307,7 @@ export const locations = [
       lon: 30.9694053148,
     },
     district: "Sheikh Zayed",
+    marketPrice: 24000000,
   },
   {
     id: 688,
@@ -348,6 +318,7 @@ export const locations = [
       lon: 30.9628608539,
     },
     district: "Sheikh Zayed",
+    marketPrice: 3500000,
   },
   {
     id: 691,
@@ -358,6 +329,7 @@ export const locations = [
       lon: 30.9614397711,
     },
     district: "Sheikh Zayed",
+    marketPrice: 15175000,
   },
   {
     id: 692,
@@ -368,6 +340,7 @@ export const locations = [
       lon: 30.9588806306,
     },
     district: "Sheikh Zayed",
+    marketPrice: 15500000,
   },
   {
     id: 700,
@@ -378,6 +351,7 @@ export const locations = [
       lon: 30.9456631292,
     },
     district: null,
+    marketPrice: 29833333.333333332,
   },
   {
     id: 704,
@@ -388,6 +362,7 @@ export const locations = [
       lon: 30.9414789386,
     },
     district: null,
+    marketPrice: 17833333.333333332,
   },
   {
     id: 705,
@@ -398,6 +373,7 @@ export const locations = [
       lon: 30.948436746,
     },
     district: "Sheikh Zayed",
+    marketPrice: 15000000,
   },
   {
     id: 706,
@@ -408,16 +384,7 @@ export const locations = [
       lon: 30.9397188981,
     },
     district: "6th of October",
-  },
-  {
-    id: 988,
-    name: "El Safwa Resort",
-    nameAr: "الصفوة ريزورت",
-    location: {
-      lat: 30.0283900177,
-      lon: 31.0107835283,
-    },
-    district: "New Cairo",
+    marketPrice: 14900000,
   },
   {
     id: 990,
@@ -428,6 +395,7 @@ export const locations = [
       lon: 30.9939009055,
     },
     district: "Sheikh Zayed",
+    marketPrice: 8500000,
   },
   {
     id: 1002,
@@ -438,6 +406,7 @@ export const locations = [
       lon: 31.0264319751,
     },
     district: "Sheikh Zayed",
+    marketPrice: 11236605.5,
   },
   {
     id: 1003,
@@ -448,6 +417,7 @@ export const locations = [
       lon: 30.9997410808,
     },
     district: "Sheikh Zayed",
+    marketPrice: 12606517.824561404,
   },
   {
     id: 1005,
@@ -458,6 +428,7 @@ export const locations = [
       lon: 30.9878279495,
     },
     district: "Sheikh Zayed",
+    marketPrice: 13850000,
   },
   {
     id: 1006,
@@ -468,6 +439,7 @@ export const locations = [
       lon: 30.9855732927,
     },
     district: "Sheikh Zayed",
+    marketPrice: 18000000,
   },
   {
     id: 1007,
@@ -478,6 +450,7 @@ export const locations = [
       lon: 30.9835252991,
     },
     district: "Sheikh Zayed",
+    marketPrice: 8500000,
   },
   {
     id: 1008,
@@ -488,6 +461,7 @@ export const locations = [
       lon: 30.9863660526,
     },
     district: "Sheikh Zayed",
+    marketPrice: 13500000,
   },
   {
     id: 1009,
@@ -498,6 +472,7 @@ export const locations = [
       lon: 30.9773340077,
     },
     district: "Sheikh Zayed",
+    marketPrice: 18500000,
   },
   {
     id: 1010,
@@ -508,6 +483,7 @@ export const locations = [
       lon: 30.974441127,
     },
     district: "Sheikh Zayed",
+    marketPrice: 23750000,
   },
   {
     id: 1011,
@@ -518,6 +494,7 @@ export const locations = [
       lon: 30.9590883649,
     },
     district: "Sheikh Zayed",
+    marketPrice: 8100000,
   },
   {
     id: 1012,
@@ -528,16 +505,7 @@ export const locations = [
       lon: 30.938391,
     },
     district: "Sheikh Zayed",
-  },
-  {
-    id: 1056,
-    name: "Nubia",
-    nameAr: "النوبية",
-    location: {
-      lat: 30.0499464769,
-      lon: 31.0187376738,
-    },
-    district: "Hurghada",
+    marketPrice: 13750000,
   },
   {
     id: 1057,
@@ -548,16 +516,7 @@ export const locations = [
       lon: 30.9939212633,
     },
     district: "Sheikh Zayed",
-  },
-  {
-    id: 1063,
-    name: "Al Karma 2",
-    nameAr: "الكرمة ٢",
-    location: {
-      lat: 30.043546819,
-      lon: 31.0024023106,
-    },
-    district: "Sheikh Zayed",
+    marketPrice: 14550000,
   },
   {
     id: 1066,
@@ -568,6 +527,7 @@ export const locations = [
       lon: 30.9985190705,
     },
     district: "Sheikh Zayed",
+    marketPrice: 25625000,
   },
   {
     id: 1067,
@@ -578,6 +538,7 @@ export const locations = [
       lon: 30.9593436208,
     },
     district: "Sheikh Zayed",
+    marketPrice: 18100000,
   },
   {
     id: 1089,
@@ -588,6 +549,7 @@ export const locations = [
       lon: 30.9336117,
     },
     district: "Sheikh Zayed",
+    marketPrice: 23845571.42857143,
   },
   {
     id: 1098,
@@ -598,6 +560,7 @@ export const locations = [
       lon: 31.0277477,
     },
     district: null,
+    marketPrice: 9000000,
   },
   {
     id: 1214,
@@ -608,16 +571,7 @@ export const locations = [
       lon: 31.0093731,
     },
     district: null,
-  },
-  {
-    id: 1248,
-    name: "Terrace Compound HDP",
-    nameAr: "تيراس كمبوند",
-    location: {
-      lat: 30.013708,
-      lon: 30.984935,
-    },
-    district: null,
+    marketPrice: 23203000,
   },
   {
     id: 1261,
@@ -628,6 +582,7 @@ export const locations = [
       lon: 30.938391,
     },
     district: null,
+    marketPrice: 15440000,
   },
   {
     id: 1413,
@@ -638,6 +593,7 @@ export const locations = [
       lon: 31.001294,
     },
     district: null,
+    marketPrice: 51338500,
   },
   {
     id: 1414,
@@ -648,5 +604,6 @@ export const locations = [
       lon: 30.9356576,
     },
     district: null,
+    marketPrice: 29813100,
   },
 ];

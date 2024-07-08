@@ -27,8 +27,8 @@ export function MainLayout({
       </div>
 
       <div
-        className={clsx({
-          "container m-auto pb-8": !fullWidth,
+        className={clsx("pb-8", {
+          "container m-auto": !fullWidth,
         })}
       >
         {children}

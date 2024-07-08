@@ -1,6 +1,5 @@
 "use client";
 
-import { useMemo } from "react";
 import { PageContent } from "./page-content";
 import { useLoadingLocalStorage } from "@/hooks/use-loading-local-storage";
 
@@ -8,7 +7,7 @@ export function FavoriteCompoundsPage() {
   const { localDataIsLoading, localData, setLocalData } =
     useLoadingLocalStorage<Record<string, boolean>>("data", {});
 
-  const ids = useMemo(() => Object.keys(localData).map(Number), [localData]);
+  const ids = Object.keys(localData).map(Number);
 
   function clearAllFavorites() {
     setLocalData({});

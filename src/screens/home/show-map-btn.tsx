@@ -6,10 +6,12 @@ export function ShowMapBtn() {
   const { showMap, toggleMap } = useHomeStore();
 
   return (
-    <div>
-      <button onClick={toggleMap} className="btn-solid">
-        {showMap ? "Hide" : "Show"} Map
-      </button>
-    </div>
+    <button
+      onClick={toggleMap}
+      className="btn-solid"
+      data-testid="show-map-btn"
+    >
+      {showMap ? "Hide" : "Show"} Map
+    </button>
   );
 }
