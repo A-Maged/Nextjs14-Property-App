@@ -16,7 +16,7 @@ export async function CompoundDetailsPage({ params }: Props) {
   const compound = await getCompoundDetails(params.id);
 
   return (
-    <div className="pb-8">
+    <div>
       <div className="container !w-full">
         <CompoundImages images={images} />
       </div>

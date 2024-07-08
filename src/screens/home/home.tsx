@@ -2,7 +2,7 @@ import { ShowMapBtn } from "./show-map-btn";
 import { CompoundsMap } from "./compounds-map";
 import { getCompounds } from "@/api-fetchers/get-compounds";
 import { getCompoundsLocations } from "@/api-fetchers/get-compounds-locations";
-import CompoundsList from "@/components/shared/compounds-list";
+import CompoundsList from "./compounds-list";
 
 export async function HomePage() {
   const apiResults = await Promise.allSettled([

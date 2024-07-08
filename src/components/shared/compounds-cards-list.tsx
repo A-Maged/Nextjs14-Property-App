@@ -3,19 +3,18 @@
 import clsx from "clsx";
 import { Compound } from "../../types/compound";
 import CompoundCard from "./compound-card";
-import { useHomeStore } from "@/screens/home/state";
 
-export default function CompoundsList({
+export default function CompoundsCardsList({
   compounds,
+  fourPerRow,
 }: {
   compounds: Compound[];
+  fourPerRow?: boolean;
 }) {
-  const { showMap } = useHomeStore();
-
   return (
     <div
       className={clsx("grid w-full grid-cols-1 gap-[10px] md:grid-cols-2", {
-        "lg:grid-cols-4": !showMap,
+        "lg:grid-cols-4": fourPerRow,
       })}
     >
       {compounds.map((compound) => (
