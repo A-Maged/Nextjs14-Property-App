@@ -1,6 +1,7 @@
 import { getCompoundDetails } from "@/api-fetchers/get-compound-details";
 import { CompoundImages } from "./compound-images";
 import millify from "millify";
+import { FavoriteCompoundButton } from "@/components/shared/favorite-compound-btn";
 
 const images = [
   "https://picsum.photos/id/1018/1000/600/",
@@ -22,9 +23,11 @@ export async function CompoundDetailsPage({ params }: Props) {
       </div>
 
       <div className="container m-auto px-4 pt-8">
-        <h1 className="mb-5 text-2xl capitalize">
-          {compound.compound} Compound
-        </h1>
+        <div className="mb-5 flex items-center gap-5">
+          <h1 className="text-2xl capitalize">{compound.compound} Compound</h1>
+
+          <FavoriteCompoundButton compoundId={compound.id} />
+        </div>
 
         <div>
           {compound.valuations.map((v, i) => (
