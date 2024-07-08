@@ -14,7 +14,7 @@ export function MapInfoPopup({ location }: { location: CompoundLocation }) {
       options={{ disableAutoPan: true }}
     >
       <div
-        className={clsx("flex flex-col gap-1 font-bold", {})}
+        className={clsx("flex select-none flex-col gap-1 font-bold", {})}
         data-testid="map-info-popup"
       >
         <h1>{location.name}</h1>
